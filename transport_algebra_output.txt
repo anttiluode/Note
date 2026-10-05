@@ -1,0 +1,23 @@
+==================================================================
+generic random Jacobians (I + noise; NOT a real model)
+  [1] read-in D_r a == T h_w           : True
+  [2] T == S^{-T}                      : True
+  S singular values  max 210  min 0.000535  (orthogonal iff all == 1)
+  cos(T h_w, S h_w) on the J-thought   : 0.035
+  [5] normalised read-in == T h_w with gain n_w/n_r : True
+      cos(normalised read-in, T h_w)  : 0.995
+------------------------------------------------------------------
+early read layer, collapsed (cf. Anthropic Fig.28d)
+  [1] read-in D_r a == T h_w           : True
+  [2] T == S^{-T}                      : True
+  S singular values  max 1.31e+03  min 0.00811  (orthogonal iff all == 1)
+  cos(T h_w, S h_w) on the J-thought   : 0.005
+  [5] normalised read-in == T h_w with gain n_w/n_r : True
+      cos(normalised read-in, T h_w)  : 0.976
+------------------------------------------------------------------
+[3] S orthogonal  ->  T == S          : True
+[4] stretch          : [4.   1.   0.25]
+    read weights     : [4.   1.   0.25]
+    write weights    : [0.25 1.   4.  ]  (agree only where stretch == 1)
+[6] eps_l(a) with oracle support      : 2.37e-15  (no transformer block was run)
+==================================================================
